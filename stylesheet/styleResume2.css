@@ -1,0 +1,351 @@
+﻿body
+{
+}
+body.HideScroll{
+    overflow-y:hidden;
+}
+
+#Accomplishment_Container{
+    padding-top:70px;
+    margin-top:15px;
+}
+#Accomplishment {
+    border: 1px solid #fbb6a6;
+    border-radius:15px;
+    width: 80%;
+    margin: auto;
+    margin-top:15px;
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: rgb(255 255 255 / 0.10);
+    box-shadow: 10px 10px 10px #3753fb;
+}
+#Accomplishment > .Proficient {
+    border: 1px solid #fbb6a6;
+    box-shadow: rgb(108 135 221 / 0.66) 5px 5px 10px;
+    border-radius:15px;
+    width: 85%;
+    margin:15px;
+    margin:auto;
+    margin-bottom:15px;
+    padding:15px;
+}
+
+#Accomplishment > .Proficient > #Skill_Grid {
+    display: grid;
+    font-size: 20px;
+    line-height: 40px;
+    margin:auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    width:85%;
+}
+#Accomplishment > .Proficient #Skill_Grid > div {
+    background: linear-gradient(to right,#e434eb,#9b1b98,#e434eb);
+    border-radius: 10px;
+    color: #e298f1;
+    font-weight: 900;
+    padding: 5px 15px 5px 15px;
+    margin:3px 8px 4px 8px;
+}
+
+#Accomplishment > .Project{
+    border: 1px solid #fbb6a6;
+    box-shadow: rgb(108 135 221 / 0.66) 5px 5px 10px;
+    border-radius:15px;
+    width: 90%;
+    margin:15px;
+    margin:auto;
+    margin-bottom:15px;
+    padding:15px;
+    background:linear-gradient(to bottom left,#f37c7c,#f8acac,#f8d3d3,#beebf5,#9df1ec,#69b1ee);
+}
+#Accomplishment > .Project .Project_Items > .DivDisplay img{
+    width:100%;
+}
+#Accomplishment > .Project .Project_Items{
+    display:flex;
+    flex-wrap:wrap;
+}
+#Accomplishment > .Project .Project_Items > .DivDisplay{
+    width:47%;
+    margin:10px;
+}
+#Accomplishment > .Project .Project_Items > .DivDisplay:hover{
+    background-color:rgb(63 116 226 / 0.20);
+    padding:12px;
+    border-radius:15px;
+}
+#Accomplishment > .Project .Project_Items > .DivDisplay .description{
+    display:none; /* <---------*/
+}
+#Accomplishment .DivTitle > h2{
+    font-size: 40px;
+    font-family: Colonna MT;
+    font-weight: 900;
+    text-align: center;
+    margin: auto;
+}
+
+#Accomplishment > .Co-Curricular {
+    border: 1px solid #fbb6a6;
+    box-shadow: rgb(108 135 221 / 0.66) 5px 5px 10px;
+    border-radius:15px;
+    width: 80%;
+    margin:15px;
+    margin:auto;
+    padding:15px;
+}
+.Co-Curricular .Div_Activities {
+    display: flex;
+    border: 1px solid #fbb6a6;
+    box-shadow: rgb(108 135 221 / 0.66) 0px 0px 10px;
+    margin:5px;
+    border-radius: 7px;
+}
+.Co-Curricular .Div_Activities .Pic_Activity {
+    width: 27%;
+    height:150px;
+    border-radius: 7px;
+    margin-right:10px;
+    color:transparent;
+}
+.Co-Curricular .Div_Activities .Pic_Activity:hover{
+    z-index:50;
+    background-color:#126f9f;
+    opacity:0.5;
+    color:#fce8b0;
+}
+.Co-Curricular .Div_Activities .Activity_description {
+    width: 65%;
+    border-radius: 7px;
+    text-wrap:normal;
+    font-family:Merriweather;
+    font-size:larger;
+    padding-top:10px;
+}
+.Pic_Activity img{
+    width:100%;
+    height:100%;
+    border-radius:6px;
+    margin:1px 1px 0px 0px;
+}
+.Pic_Activity img:hover{
+    height:80%;
+}
+
+.ViewButton {
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px 10px 15px;
+    border-radius: 20px;
+    box-shadow: inset 0 0 0 0 #bc70f1;
+    transition:0.3s;
+}
+.ViewButton:hover {
+    font-weight: bolder;
+    color:white;
+    box-shadow: inset 117px 0 0 0 #bc70f1;
+}
+
+.Project_PopUp {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to top right,#ff0000,#fbc56e,#4c5af7);
+    z-index: 200;
+    visibility: hidden; 
+}
+.Project_PopUp.open{
+    visibility:visible;
+    overflow-y: auto; 
+}
+.PJ_inner{
+    min-height:100vh;
+    padding:40px 15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.PJ_content {
+    background-color: rgb(255 255 255 / 0.10);
+    padding: 30px;
+    border-radius: 25px;
+    max-width: 900px;
+    width: 100%;
+    border: 1px solid #fbb6a6;
+    margin-top:60px;
+    font-family:'Merriweather';
+    font-size:larger;
+}
+.PJ_thumbnail img{
+    width:100%;
+    height:100%;
+}
+.PJ_header{
+    position:relative;
+}
+.PJ_header h2{
+    text-align:center;
+}
+.PJ_header .ViewButton{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:absolute;
+    right:-40px;
+    top:-30px;
+}
+.PJ_header h2{
+    font-size:25px;
+    margin:20px 0px 15px;
+}
+.PJ_body .description{
+    margin-bottom:15px;
+}
+.GeneralInfo{
+    padding-top:15px;
+}
+.PJ_body .GeneralInfo li{
+    margin-bottom:7px;
+    font-weight:600;
+}
+.PJ_body .GeneralInfo li span{
+    font-weight: 300;
+}
+
+#Contact {
+    border: 1px solid #fbb6a6;
+    border-radius: 15px;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: rgb(255 255 255 / 0.10);
+    box-shadow: 10px 10px 10px #3753fb;
+}
+#Contact .Contact_Title h2{
+    font-size: 60px;
+    font-family: Colonna MT;
+    font-weight: 900;
+    text-align: center;
+    margin: auto;
+}
+#Contact .Contact_container{
+    display:flex;
+}
+#Contact .Contact_Info, .MessageArea{
+    border: 1px solid #fbb6a6;
+    width: 50%;
+    box-shadow: rgb(108 135 221 / 0.66) 5px 5px 10px;
+    margin:5px 0px 10px 10px;
+    border-radius:15px;
+}
+#Contact .Contact_Info{
+    padding-top:15px;
+}
+
+.MessageArea .TakeInput-correct,.TakeInput-wrong,.TakeInput{
+    width:90%;
+    margin:25px;
+}
+.MessageArea .INPUT{
+    display:block;
+    width:90%;
+    height:50px;
+    border-radius:20px;
+    padding-left:10px;
+    padding-right:5px;
+    border:none;
+    background-color:rgb(255 255 255 / 0.21);
+    font-family:'Comic Sans MS';
+    font-size:17px;
+    border:1px solid transparent;
+}
+.MessageArea textarea.INPUT{
+    height:120px;
+    resize:none;
+    padding-top:5px;
+}
+.MessageArea .INPUT:focus{
+    border-color:rgb(0 0 0 / 0.00);
+}
+.MessageArea .Sbmt_Btn{
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px 10px 15px;
+    border-radius: 20px;
+    box-shadow: inset 0 0 0 0 #bc70f1;
+    transition:0.3s;
+    margin-left:10%;
+    margin-bottom:10px;
+}
+.MessageArea .Sbmt_Btn:hover{
+    font-weight: bolder;
+    color:white;
+    box-shadow: inset 117px 0 100px 0 #bc70f1;
+}
+.Contact_Info .Social_Contact{
+    margin:0px 0px 25px;
+    padding:0px 0px 0px 20px;
+}
+
+.SocialMedia_Links a{
+    display:inline-flex;
+    height:45px;
+    width:45px;
+    background-color:rgb(222 147 147 / 0.27);
+    margin:4px;
+    align-items:center;
+    justify-content:center;
+    border-radius:15px;
+    font-size:30px;
+}
+.Social_Contact {
+    font-family: Merriweather;
+    font-size: large;
+}
+.SocialMedia_Links a#fb{
+    color:#0f63e8;
+}
+.SocialMedia_Links a#fb:hover{
+    box-shadow:3px 3px 15px #0f63e8;
+}
+
+.SocialMedia_Links a#insta{
+    color:#fa61df;
+}
+.SocialMedia_Links a#insta:hover{
+    color:white;
+    background-color:#f82cee;
+    box-shadow:3px 3px 15px #ff9cf1;
+}
+
+.SocialMedia_Links a#linkedin{
+    color:#9fedf5;
+    background-color:#3753fb
+}
+.SocialMedia_Links a#linkedin:hover{
+    box-shadow:3px 3px 15px #9fedf5;
+}
+
+.SocialMedia_Links a#telegram {
+    color: white;
+    background-color: #217fcf;
+}
+.SocialMedia_Links a#telegram:hover{
+    box-shadow:3px 3px 10px lightblue;
+}
+
+.SocialMedia_Links a#github{
+    background-color:rgb(0 0 0 / 0.74);
+    color:white;
+}
+.SocialMedia_Links a#github:hover{
+    box-shadow:3px 3px 15px rgb(250 243 243 / 0.42);
+}
